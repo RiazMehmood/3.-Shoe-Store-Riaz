@@ -1,26 +1,29 @@
-import {Routes, Route} from 'react-router';
+import {Routes, Route, Link} from 'react-router-dom';
 import {Home} from './components/Home';
-import {About} from './components/About';
-import {Link} from 'react-router-dom';
 import {NotFound} from './components/NotFound';
-import {Products} from './components/Products';
+import {Launch} from './components/Launch';
+import {LaunchIndex} from './components/LaunchIndex';
+import {LaunchShoe} from './components/LaunchShoe';
 import './App.css';
 
-function App() {
+export function App() {
   return (
     <div>
       <h1>Welcome</h1>
-      <div>
+      <nav>
         <Link to="/">Home</Link>
-        <Link to="about">About</Link>
-        <Link to="products">Products</Link>
-      </div>
+        <Link to="/launch">Launch</Link>
+      </nav>
+
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="about" element={<About/>}/>
-        <Route path="products" element={<Products/>}/>
-        <Route path="*" element={<NotFound/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="launch" element={<Launch />}>
+          <Route path="/" element={<LaunchIndex />} />
+          <Route path=":slug" element={<LaunchShoe />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
+    
       
       </div>
   );

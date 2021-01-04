@@ -1,9 +1,10 @@
-import React from 'react'
 
-export const NotFound = () => {
+
+export function NotFound() {
     return (
-        <div>
-            Page Not Found
-        </div>
-    )
-}
+      <div>
+        <h1>Not found!</h1>
+        <p>Sorry your page was not found!</p>
+      </div>
+    );
+  }
