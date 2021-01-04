@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import { shoes } from './Data';
 
 export function LaunchShoe() {
     const { slug } = useParams();

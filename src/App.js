@@ -1,10 +1,9 @@
-import {Routes, Route, Link} from 'react-router-dom';
-import {Home} from './components/Home';
-import {NotFound} from './components/NotFound';
-import {Launch} from './components/Launch';
-import {LaunchIndex} from './components/LaunchIndex';
-import {LaunchShoe} from './components/LaunchShoe';
-import './App.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import { Home } from './components/Home';
+import { NotFound } from './components/NotFound';
+import { Launch } from './components/Launch';
+import { LaunchIndex } from './components/LaunchIndex';
+import { LaunchShoe } from './components/LaunchShoe';
 
 export function App() {
   return (
